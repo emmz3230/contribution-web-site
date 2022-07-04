@@ -1,6 +1,8 @@
 .background {
     background-image: url(./pexels-tirachard-kumtanom-733857.jpg);
+    height: 760px;
 }
+
 .egbe{
     /* margin-top: 200px; */
     padding-top: 20px;
@@ -12,14 +14,23 @@
     color: white;
     font-size: 50px;
     margin-left: 200px;
+    margin-bottom: 20px;
 }
 .group{
     color: white;
-    font-size: 50px;
+    font-size: 30px;
     margin-left: 200px;
+    margin-bottom: 50px;
 }
 .index{
-    font-size: 10px;
+    font-size: 15px;
+}
+
+.input-big{
+    width: 900px;
+    height: 60px;
+    border-radius: 5px;
+    
 }
 
 
