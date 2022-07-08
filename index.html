@@ -14,16 +14,19 @@
             Egbe Alajeseku Saving Group
     </div>
     <div class="total">
-        Total Amount saved: # <button> 0:00</button>
+        Total Amount saved: # <button id="amountSaved" class="zero"> 0:00</button>
     </div>
-    <div class="group">
+    <div class="total">
+        Total Amount Withdraw: # <button class="zero"> 0:00</button>
+    </div>
+    <form action="" method="post" id="form" name="myform" onsubmit="return validate()">
+        <div class="group">
         <label for=" Group Members">
             Group Members
             <i class="index">(list of members with their money saved):</i>
         </label>
         <br>
-        <input type="text"  class="input-big"
-         placeholder="members list" required = "required">
+       <button id="big" class="input-big">NIL</button>
     </div>
     <div class="name">
         <label for="Name">Name</label>
@@ -32,23 +35,33 @@
         placeholder="Enter your fullName" required = "required">
     </div>
     <div class="choose">
-        <label for="choose a Tier">Choose a Tier</label>
-        <br>
-        <input type="number" name="" id=""  
-        placeholder="select prefered Tier" required = "required"
-        >
-        
+         <label for="tier">Choose a Tier</label>
+         <br>
+                <select id="tier" name="tier" class="tier">
+                  <option value="Select preferred tier">Select preferred tier</option>
+                  <option value="tier 1">
+                    Tier 1 -> #10,000 (7% interest weekly)
+                  </option>
+                  <option value="tier 2">
+                    Tier 2 -> #20,000 (12% interest weekly)
+                  </option>
+                  <option value="tier 3">
+                    Tier 3 -> #30,000 (25% interest weekly)
+                  </option>
+                </select>
     </div>
     <div class="amount">
         <label for=""> Amount</label>
         <br>
-        <input type="number" name="" id=""
+        <input type="number" name="" id="figure"
         placeholder=" Enter the Amount you want to save" required = "required">
         
     </div>
     
         <button class="join"> Join Saving Group </button>
     </div>
+    </form>
+    <p id="interest"></p>
 </body>
 <script src="index.js"></script>
 </html>
