@@ -58,9 +58,21 @@ if (selectTier != "select preferred tier"){
 }else{
     alert("select a tier to proceed")
 }
-amountSaved 
-getInterest
-calculatedAmount
+//adding the new inputed value 
+
+amountSaved  += Number(newInputAmount)
+amountSaved.innerhtml = totalMoneyAdd
+
+calculatedAmount = percentage *  newInputAmount
+calculatedAmount = calculatedAmount.toFixed();
+getInterest.textContent = "your weekly interest # " + calculatedAmount
+ 
+
+
+
+
+
+
 list
 
 
