@@ -62,45 +62,41 @@ if (selectTier != "select preferred tier"){
 
 amountSaved  += Number(newInputAmount)
 amountSaved.innerhtml = totalMoneyAdd
-
+//adding interest to the saving
 calculatedAmount = percentage *  newInputAmount
 calculatedAmount = calculatedAmount.toFixed();
 getInterest.textContent = "your weekly interest # " + calculatedAmount
- 
 
+//amount to withdraw with  interest
+amountToWithdraw.innerhtml = Number(newInputAmount) * (percentage * Number(newInputAmount))
 
+list.push(firstName + newInputAmount) //push the name to the space provided 
+memberName.innerHTML = list
 
-
-
-
-list
+setFormMessage(newInputAmount == "" || newInputAmount.length == 0)
+? ("input an amount to save")
+: ("Registration succesful")
 
 
 }
+//  const withTernary = ({
+//    conditionA, conditionB
+//  }) => (
+//    (!conditionA)
+//      ? valueC
+//      : (conditionB)
+//      ? valueA
+//      : valueB
+//  );
 
-// let selectedTier = (selectedTier != "slected Prefered Tier") ? 
-//    switch(selectTier){
-
-// }
-
- const withTernary = ({
-   conditionA, conditionB
- }) => (
-   (!conditionA)
-     ? valueC
-     : (conditionB)
-     ? valueA
-     : valueB
- );
-
- const withIf = ({
-  conditionA, conditionB
-}) => {
-  if (conditionA) {
-    if (conditionB) {
-      return valueA;
-    }
-    return valueB;
-  }
-  return valueC;
-};
+//  const withIf = ({
+//   conditionA, conditionB
+// }) => {
+//   if (conditionA) {
+//     if (conditionB) {
+//       return valueA;
+//     }
+//     return valueB;
+//   }
+//   return valueC;
+// };
